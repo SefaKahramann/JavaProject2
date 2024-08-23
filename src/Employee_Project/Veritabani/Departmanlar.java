@@ -1,9 +1,9 @@
 package Employee_Project.Veritabani;
 
-import Modeller.Departmanlar.BilisimTeklonojileriDepartmani;
-import Modeller.Departmanlar.Departman;
-import Modeller.Departmanlar.InsanKaynaklariDepartmani;
-import Modeller.Departmanlar.YonetimDepartmani;
+import Employee_Project.Modeller.Departmanlar.BilisimTeklonojileriDepartmani;
+import Employee_Project.Modeller.Departmanlar.Departman;
+import Employee_Project.Modeller.Departmanlar.InsanKaynaklariDepartmani;
+import Employee_Project.Modeller.Departmanlar.YonetimDepartmani;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

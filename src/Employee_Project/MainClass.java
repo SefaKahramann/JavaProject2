@@ -1,5 +1,7 @@
-import Modeller.Calisanlar.Calisan;
-import Veritabani.Calisanlar;
+package Employee_Project;
+
+import Employee_Project.Modeller.Calisanlar.Calisan;
+import Employee_Project.Veritabani.Calisanlar;
 import java.util.Scanner;
 
 public class MainClass {
