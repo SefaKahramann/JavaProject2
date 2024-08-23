@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class Calisanlar {
 
     private static ArrayList<Calisan> calisanList=new ArrayList<>();
-
     public static ArrayList<Calisan> getCalisanList() {
         return calisanList;
     }
@@ -36,8 +35,8 @@ public class Calisanlar {
 
     public static void printCalisanlar() {
         if (!calisanList.isEmpty()){
-            for (Calisan isci:calisanList){
-                System.out.print("Calişanlar : "+isci);
+            for (Calisan calisan:calisanList){
+                System.out.print("Calişanlar : "+calisan);
             }
         }else {
             System.out.println("Çalışan listesi boş.");
