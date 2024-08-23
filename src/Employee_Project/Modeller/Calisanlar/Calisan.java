@@ -2,6 +2,7 @@ package Employee_Project.Modeller.Calisanlar;
 
 import Employee_Project.Veritabani.Calisanlar;
 import Employee_Project.Modeller.Departmanlar.Departman;
+import Employee_Project.Veritabani.Departmanlar;
 
 public class Calisan {
 
@@ -19,29 +20,16 @@ public class Calisan {
                                 // Örn: Şirkette 257 calisan var, Bilişim teklonojileri departmaninda Mehmet Ali Bulut kaydedilecek olsun,
                                 // Mehmet Ali icin ID 'BTD258MAB' olmalıdır.
         Calisanlar.addACalisan(this);
-
     }
 
-    // Terminalden girilen calisanin departman koduna göre, gerekli departman set edilmelidir.
-    // Çalışan sınıfının Constructor 'ı main'de tanımlı. Program çalıştığında, terminalden gireceğimiz
-    // departman kodu, buradaki metod (setDepartman) vasıtasıyla departman listesinin tümünü dolaşıp (foreach)
-    // getDepartmanKodu() ile bulunan sonuçlardan biriyle aynı mı? Diye bakıyoruz...
-    // Aynıysa, "terminalden girilen çalışanı bu departmana set et" demektir...
     private void setDepartman(String departman) {
-        // TODO setDepartman() methodunu doldurunuz
-
-        //  Terminalden girilen calisanin departman koduna göre, gerekli departman set edilmelidir.
-        //  Çalışan sınıfının Constructor 'ı main'de tanımlı. Program çalıştığında, terminalden gireceğimiz
-        //  departman kodu, buradaki metod (setDepartman) vasıtasıyla departman listesinin tümünü dolaşıp (foreach)
-        //  getDepartmanKodu() ile bulunan sonuçlardan biriyle aynı mı? Diye bakıyoruz...
-        //  Aynıysa, "terminalden girilen çalışanı bu departmana set et" demektir...
-        //  İpucu: Departman listesinin (Veritabani.Departmanlar.DepartmanList) içerisindeki departmanların kodları var,
-        //  bu kodlari donguye tutmak ise yarayabilir.
-
-
-
+        for (Departman A : Departmanlar.getDepartmanList()){
+            if (A.getDepartmanKodu().equalsIgnoreCase(departman)){
+                this.Departman=A;
+                break;
+            }
+        }
     }
-
 
     private void setCalisanId() {
         // TODO setCalisanId() methodunu doldurunuz
