@@ -13,37 +13,35 @@ public class Calisanlar {
 
 
     public static void addACalisan(Calisan calisan) {
-        // burası doldurulacak duruma göre arrayliste geri dönülecek
+        calisanList.add(calisan);
     }
 
     public static void deleteACalisanWithId(String calisanId) {
 
 
-        // TODO Bir çalışan silmek için gerekli method. deleteACalisanWithId() methodunu doldurunuz
-
-
 
     }
-
 
     public static void printDepartmandakiCalisanlar(String departmanKodu) {
-
-        // TODO  Departman kodu verilerek, konsola sadece o departmanda calisanlari yazdirmak için
-        //       printDepartmandakiCalisanlar() methodunu doldurunuz
-
-
-
-
-
+        boolean bulundu=false;
+        for (Calisan calisan: calisanList){
+            if (calisan.getDepartman().getDepartmanKodu().equalsIgnoreCase(departmanKodu)){
+                System.out.println(calisan);
+                bulundu=true;
+            }
+        }
+        if (!bulundu){
+            System.out.print("Departmanda çalışan bulunamadı : "+departmanKodu);
+        }
     }
 
-
     public static void printCalisanlar() {
-
-        // TODO  Calisanlari konsola yazdirmak için printCalisanlar() methodunu doldurun
-
-
-
-
+        if (!calisanList.isEmpty()){
+            for (Calisan isci:calisanList){
+                System.out.print("Calişanlar : "+isci);
+            }
+        }else {
+            System.out.println("Çalışan listesi boş.");
+        }
     }
 }
