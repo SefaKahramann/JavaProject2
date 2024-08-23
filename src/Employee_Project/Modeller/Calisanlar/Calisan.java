@@ -1,12 +1,8 @@
 package Employee_Project.Modeller.Calisanlar;
 
-import Employee_Project.Modeller.Departmanlar.BilisimTeklonojileriDepartmani;
-import Employee_Project.Modeller.Departmanlar.YonetimDepartmani;
 import Employee_Project.Veritabani.Calisanlar;
 import Employee_Project.Modeller.Departmanlar.Departman;
 import Employee_Project.Veritabani.Departmanlar;
-
-import java.util.Scanner;
 
 public class Calisan {
 
@@ -21,8 +17,8 @@ public class Calisan {
         this.maas = maas;
         setDepartman(departmanKodu);
         this.setCalisanId();    // constructor çalıştığında, aşağıda tanımlayacağınız bu metod vasıtasıyla tekil bi ID alacak...
-        // Örn: Şirkette 257 calisan var, Bilişim teklonojileri departmaninda Mehmet Ali Bulut kaydedilecek olsun,
-        // Mehmet Ali icin ID 'BTD258MAB' olmalıdır.
+                               // Örn: Şirkette 257 calisan var, Bilişim teklonojileri departmaninda Mehmet Ali Bulut kaydedilecek olsun,
+                              // Mehmet Ali icin ID 'BTD258MAB' olmalıdır.
         Calisanlar.addACalisan(this);
     }
 
@@ -49,27 +45,28 @@ public class Calisan {
         }
         return isminBasHarfleri.toUpperCase();
     }
-        public String getCalisanId() {
+
+    public String getCalisanId() {
         return this.calisanId;
     }
 
     public Departman getDepartman() {
         return this.Departman;
     }
+
     public String getDepartmanAdi() {
-        String departmanKodu=this.Departman.getDepartmanKodu();
-        switch (departmanKodu){
-            case "YD": return "YonetimDepartmani";
-            case "BTD": return "Bilişim Teknolojileri Departmanı";
-            case "IKD": return "İnsan Kaynakları Departmanı";
-            default: return "Departman bulunamadı";
+        String departmanAdi=this.Departman.getDepartmanKodu();
+
+        switch (departmanAdi){
+            case "YD": return "Yönetim Depertmanı";
+            case "BTD" : return "Bilişim Teknolojileri Departmanı";
+            case  "IKD" : return "İnsan Kaynakları Departmanı";
+            default: return "Bilinmeyen Departman";
         }
     }
 
-    // Calisana zam yapilmasi için gerekli bir method
     public static void zamYap(String calisanId) {
 
-        // TODO zamYap() methodunu doldurunuz
         // İpucu:Calisan ID si kullanilarak yapilmalidir, diğer attributelarin aynilarindan 1 er tane daha olabilirdi.
 
 
@@ -77,12 +74,9 @@ public class Calisan {
 
     @Override
     public String toString() {
-
-        // TODO toString() metheodunu doldurunuz
-        // İpucu: Detayli anlatim EmployeesRequirements.pdf içerisinde.
-
-        return "???? ";// TODO burayi unutmayin
-
-
+        return "Çalışan ID: " + this.calisanId + "\n" +
+                "Ad Soyad: " + this.adSoyad + "\n" +
+                "Maaş: " + this.maas + "\n"+
+                "Departman: " + getDepartmanAdi() + "\n" ;
     }
 }
