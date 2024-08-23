@@ -1,6 +1,6 @@
 package Employee_Project.Veritabani;
 
-import Modeller.Calisanlar.Calisan;
+import Employee_Project.Modeller.Calisanlar.Calisan;
 import java.util.ArrayList;
 
 public class Calisanlar {

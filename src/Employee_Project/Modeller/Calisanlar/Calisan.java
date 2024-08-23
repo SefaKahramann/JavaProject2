@@ -1,8 +1,7 @@
 package Employee_Project.Modeller.Calisanlar;
 
 import Employee_Project.Veritabani.Calisanlar;
-import Modeller.Departmanlar.Departman;
-import Veritabani.Calisanlar;
+import Employee_Project.Modeller.Departmanlar.Departman;
 
 public class Calisan {
 
