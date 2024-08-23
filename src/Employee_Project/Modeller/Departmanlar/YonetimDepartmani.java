@@ -4,12 +4,10 @@ public class YonetimDepartmani implements Departman {
 
     final String departmanKodu = "YD";
 
-    // TODO Bu class'da sadece zam oranini belirtmelisiniz
-    //      Başka bişeyi değiştirmeye gerek yok.
-    final int zamOrani = 0;
+    final double zamOrani = 0.13;
 
     @Override
-    public int getZamOrani() {
+    public double getZamOrani() {
         return zamOrani;
     }
 
