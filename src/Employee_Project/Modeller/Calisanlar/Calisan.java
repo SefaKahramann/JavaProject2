@@ -32,15 +32,13 @@ public class Calisan {
     }
 
     private void setCalisanId() {
-        // TODO setCalisanId() methodunu doldurunuz
-        // Calisanin ID sinin kendisine özel olduğundan bahsetmistik,
-        // ID nin nasil kaydedileceği Readme Dosyasi içerisinde yer aliyor.
-
-
-
+        int calisanSayisi=Calisanlar.getCalisanList().size()+1;
+        this.isimKodu=getCalisanIsimKodu();
+        this.calisanId= Departman.getDepartmanKodu()+calisanSayisi+this.isimKodu;
     }
 
     private String getCalisanIsimKodu() {
+
         // TODO getCalisanIsimKOdu() methodunu doldurunuz
         // Calisanin ID sinin sonuna isim kodu eklenmesi için, ismi parçalayan bir method
         // Basit string metodlari ise isinize cok yarayacaktir fakat dinamik olmasina dikkat edelim...
