@@ -4,12 +4,10 @@ public class InsanKaynaklariDepartmani implements Departman {
 
     final String departmanKodu = "IKD";
 
-    // TODO Bu class'da sadece zam oranini belirtmelisiniz
-    //      Başka bişeyi değiştirmeye gerek yok.
-    final int zamOrani = 0;
+    final double zamOrani = 0.10;
 
     @Override
-    public int getZamOrani() {
+    public double getZamOrani() {
         return zamOrani;
     }
 

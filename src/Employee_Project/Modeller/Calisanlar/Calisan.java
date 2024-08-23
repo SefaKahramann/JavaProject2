@@ -1,5 +1,8 @@
 package Employee_Project.Modeller.Calisanlar;
 
+import Employee_Project.Modeller.Departmanlar.BilisimTeklonojileriDepartmani;
+import Employee_Project.Modeller.Departmanlar.InsanKaynaklariDepartmani;
+import Employee_Project.Modeller.Departmanlar.YonetimDepartmani;
 import Employee_Project.Veritabani.Calisanlar;
 import Employee_Project.Modeller.Departmanlar.Departman;
 import Employee_Project.Veritabani.Departmanlar;
@@ -65,11 +68,50 @@ public class Calisan {
         }
     }
 
-    public static void zamYap(String calisanId) {
+    public void setMaas(int maas) {
+        this.maas = maas;
+    }
 
-        // İpucu:Calisan ID si kullanilarak yapilmalidir, diğer attributelarin aynilarindan 1 er tane daha olabilirdi.
+    public int getMaas() {
+        return maas;
+    }
 
+    public String getAdSoyad() {
+        return adSoyad;
+    }
 
+    public static void zamYap (String calisanId) {
+        boolean bulundu = false;
+        for (Calisan calisan : Calisanlar.getCalisanList()) {
+            if (calisan.getCalisanId().equals(calisanId)) {
+                bulundu = true;
+                String departmanKodu = calisan.getDepartmanAdi();
+                double zamOrani = 0;
+                switch (departmanKodu) {
+                    case "IKD":
+                        zamOrani = new InsanKaynaklariDepartmani().getZamOrani();
+                        break;
+                    case "BTD":
+                        zamOrani = new BilisimTeklonojileriDepartmani().getZamOrani();
+                        break;
+                    case "YD":
+                        zamOrani = new YonetimDepartmani().getZamOrani();
+                        break;
+                    default:
+                        System.out.println("Geçersiz departman kodu: " + departmanKodu);
+                        return;
+                }
+                int mevcutMaas = calisan.getMaas();
+                int yeniMaas = (int) (mevcutMaas * (1 + zamOrani));
+                calisan.setMaas(yeniMaas);
+
+                System.out.println(calisan.getAdSoyad() + " isimli çalışanın yeni maaşı: " + yeniMaas);
+                break;
+            }
+        }
+        if (!bulundu){
+            System.out.println("Çalışan ID'si bulunamadı: " + calisanId);
+        }
     }
 
     @Override
