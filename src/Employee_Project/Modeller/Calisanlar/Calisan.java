@@ -1,8 +1,12 @@
 package Employee_Project.Modeller.Calisanlar;
 
+import Employee_Project.Modeller.Departmanlar.BilisimTeklonojileriDepartmani;
+import Employee_Project.Modeller.Departmanlar.YonetimDepartmani;
 import Employee_Project.Veritabani.Calisanlar;
 import Employee_Project.Modeller.Departmanlar.Departman;
 import Employee_Project.Veritabani.Departmanlar;
+
+import java.util.Scanner;
 
 public class Calisan {
 
@@ -45,27 +49,21 @@ public class Calisan {
         }
         return isminBasHarfleri.toUpperCase();
     }
-
-
-    // Calisanin id sini almak icin basit getter method
-    public String getCalisanId() {
+        public String getCalisanId() {
         return this.calisanId;
     }
 
-    // Calisanin departmanini almak icin basit getter method
     public Departman getDepartman() {
         return this.Departman;
     }
-
-
-    // Departman adini verebilmek için bir method
     public String getDepartmanAdi() {
-
-        // TODO getDepartmanAdi() methodunu doldurunuz
-        // İpucu: Departman Kodu YD ise departman adi Yonetim Departmani olarak kaydedilmelidir.
-
-
-        return "???? ";// TODO burayi unutmayin
+        String departmanKodu=this.Departman.getDepartmanKodu();
+        switch (departmanKodu){
+            case "YD": return "YonetimDepartmani";
+            case "BTD": return "Bilişim Teknolojileri Departmanı";
+            case "IKD": return "İnsan Kaynakları Departmanı";
+            default: return "Departman bulunamadı";
+        }
     }
 
     // Calisana zam yapilmasi için gerekli bir method
@@ -77,7 +75,6 @@ public class Calisan {
 
     }
 
-    // Calisanlari yazdırmak için gerekli bir override
     @Override
     public String toString() {
 
