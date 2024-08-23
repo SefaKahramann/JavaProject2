@@ -13,20 +13,20 @@ public class Calisanlar {
 
 
     public static void addACalisan(Calisan calisan) {
-        // burası doldurulacak duruma göre arrayliste geri dönülecek
+        calisanList.add(calisan);
     }
 
     public static void deleteACalisanWithId(String calisanId) {
-
-
-        // TODO Bir çalışan silmek için gerekli method. deleteACalisanWithId() methodunu doldurunuz
-
-
-
+        for (Calisan e:calisanList)
+            if (e.equals(calisanId)){
+                calisanList.remove(e);
+            }else
+                System.out.println("ID Bulunamadı");
     }
 
 
     public static void printDepartmandakiCalisanlar(String departmanKodu) {
+
 
         // TODO  Departman kodu verilerek, konsola sadece o departmanda calisanlari yazdirmak için
         //       printDepartmandakiCalisanlar() methodunu doldurunuz
