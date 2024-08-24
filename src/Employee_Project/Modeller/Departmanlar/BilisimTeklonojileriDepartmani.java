@@ -4,8 +4,6 @@ public class BilisimTeklonojileriDepartmani implements Departman {
 
     final String departmanKodu = "BTD";
 
-    // TODO Bu class'da sadece zam oranini belirtmelisiniz
-    //      Başka bişeyi değiştirmeye gerek yok.
     final double zamOrani = 0.10;
 
 
