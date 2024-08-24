@@ -2,6 +2,7 @@ package Employee_Project;
 
 import Employee_Project.Modeller.Calisanlar.Calisan;
 import Employee_Project.Veritabani.Calisanlar;
+
 import java.util.Scanner;
 
 public class MainClass {
@@ -38,6 +39,7 @@ public class MainClass {
                         System.out.print("Lütfen maas giriniz : ");
                         int calisanMaas = input.nextInt();
 
+                        departmanKisaltmalari();
                         System.out.print("Lütfen departman kodunu giriniz : ");
                         String calisanDepartmanKod = stringInput.nextLine();
 
@@ -79,6 +81,7 @@ public class MainClass {
                 Calisanlar.printCalisanlar();
                 System.out.println("---------------------------------------------");
             } else if (secim1 == 3) {
+                departmanKisaltmalari();
                 System.out.print("Lütfen departman kodunu giriniz : ");
                 String departmanKodu = stringInput.nextLine();
                 System.out.print("Tüm calisanlar listeleniyor...");
@@ -96,5 +99,12 @@ public class MainClass {
                 break;
             }
         }
+    }
+
+    static void departmanKisaltmalari() {
+        System.out.println("Departmanlar ve kısaltmaları");
+        System.out.println("Yönetim Departmanı : YD\n" +
+                "İnsan Kaynakları Departmanı : IKD\n" +
+                "Bilişim Teknolojileri Departmanı : BTD\n");
     }
 }
