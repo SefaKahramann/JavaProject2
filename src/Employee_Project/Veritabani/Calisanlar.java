@@ -1,9 +1,9 @@
 package Employee_Project.Veritabani;
-
 import Employee_Project.Modeller.Calisanlar.Calisan;
 import java.util.ArrayList;
 
 public class Calisanlar {
+
     private static ArrayList<Calisan> calisanList=new ArrayList<>();
 
     public static ArrayList<Calisan> getCalisanList() {
@@ -13,11 +13,12 @@ public class Calisanlar {
         calisanList.add(calisan);
     }
     public static void deleteACalisanWithId(String calisanId) {
-        for (Calisan e:calisanList)
-            if (e.equals(calisanId)){
+        for (Calisan e:calisanList) {
+            if (e.equals(calisanId)) {
                 calisanList.remove(e);
-            }else
+            } else
                 System.out.println("ID Bulunamadı");
+        }
     }
 
     public static void printDepartmandakiCalisanlar(String departmanKodu) {

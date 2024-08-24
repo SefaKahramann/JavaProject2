@@ -6,7 +6,6 @@ public class BilisimTeklonojileriDepartmani implements Departman {
 
     final double zamOrani = 0.10;
 
-
     @Override
     public double getZamOrani() {
         return zamOrani;
