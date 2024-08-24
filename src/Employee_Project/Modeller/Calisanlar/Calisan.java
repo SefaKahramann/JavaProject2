@@ -15,9 +15,6 @@ public class Calisan {
     private Departman Departman;
     private String isimKodu = "";
 
-    public Calisan() {
-    }
-
     public Calisan(String adSoyad, int maas, String departmanKodu) {
         setAdSoyad(adSoyad);
         setMaas(maas);

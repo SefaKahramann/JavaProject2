@@ -1,12 +1,9 @@
 package Employee_Project;
-
 import Employee_Project.Modeller.Calisanlar.Calisan;
 import Employee_Project.Veritabani.Calisanlar;
-
 import java.util.Scanner;
 
 public class MainClass {
-
     public static void main(String[] args) throws InterruptedException {
         Scanner input = new Scanner(System.in);
         Scanner stringInput = new Scanner(System.in);
@@ -55,6 +52,7 @@ public class MainClass {
                         Thread.sleep(1000);
                         break;
                     } else if (secim2 == 3) {
+                        Calisanlar.printCalisanlar();
                         System.out.print("Lütfen zam yapmak istediğiniz çalışanın ID sini giriniz : ");
                         String calisanId = stringInput.nextLine();
                         Calisan.zamYap(calisanId);
@@ -67,6 +65,7 @@ public class MainClass {
                         break;
                     } else {
                         System.out.println("Hatali secim yaptiniz lütfen tekrar deneyiniz.");
+                        break;
                     }
                 }
             } else if (secim1 == 2) {
@@ -94,15 +93,17 @@ public class MainClass {
                 System.out.println("---------------------------------------------");
                 Calisanlar.printDepartmandakiCalisanlar(departmanKodu);
                 System.out.println("---------------------------------------------");
-            } else {
-                System.out.print("Başarıyla çıkış yaptınız, iyi günler dileriz.");
+            } else if (secim1==4) {
+                System.out.println("Başarıyla çıkış yaptınız , iyi günler dileriz. ");
                 break;
+            } else {
+                System.out.print("Hatalı tuşlama yaptınız, Lütfen daha sonra tekrar deneyiniz.\n");
             }
         }
     }
 
     static void departmanKisaltmalari() {
-        System.out.println("Departmanlar ve kısaltmaları");
+        System.out.println("Departmanlar ve kısaltmaları : ");
         System.out.println("Yönetim Departmanı : YD\n" +
                 "İnsan Kaynakları Departmanı : IKD\n" +
                 "Bilişim Teknolojileri Departmanı : BTD\n");
