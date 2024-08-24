@@ -45,6 +45,7 @@ public class MainClass {
                         Thread.sleep(1000);
                         break;
                     } else if (secim2 == 2) {
+                        Calisanlar.printCalisanlar();
                         System.out.print("Lütfen silmek istediğiniz çalışanın ID sini giriniz : ");
                         String calisanId = stringInput.nextLine();
                         Calisanlar.deleteACalisanWithId(calisanId);
