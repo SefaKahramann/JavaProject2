@@ -4,8 +4,8 @@ import Employee_Project.Modeller.Calisanlar.Calisan;
 import java.util.ArrayList;
 
 public class Calisanlar {
-
     private static ArrayList<Calisan> calisanList=new ArrayList<>();
+
     public static ArrayList<Calisan> getCalisanList() {
         return calisanList;
     }

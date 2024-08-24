@@ -15,6 +15,9 @@ public class Calisan {
     private Departman Departman;
     private String isimKodu = "";
 
+    public Calisan() {
+    }
+
     public Calisan(String adSoyad, int maas, String departmanKodu) {
         setAdSoyad(adSoyad);
         setMaas(maas);
@@ -47,7 +50,7 @@ public class Calisan {
         return isminBasHarfleri.toUpperCase();
     }
 
-    public String getCalisanId() {
+    public String  getCalisanId() {
         return this.calisanId;
     }
 
@@ -74,7 +77,7 @@ public class Calisan {
         for (Calisan calisan : Calisanlar.getCalisanList()) {
             if (calisan.getCalisanId().equals(calisanId)) {
                 bulundu = true;
-                String departmanKodu = calisan.getDepartmanAdi();
+                String departmanKodu = calisan.getDepartman().getDepartmanKodu();
                 double zamOrani = 0;
                 switch (departmanKodu) {
                     case "IKD":
@@ -123,7 +126,7 @@ public class Calisan {
     public String toString() {
         return "Çalışan ID: " + this.calisanId + "\n" +
                 "Ad Soyad: " + this.adSoyad + "\n" +
-                "Maaş: " + this.maas + "\n" +
+                "Maaş: " + this.maas + " ₺\n" +
                 "Departman: " + getDepartmanAdi() + "\n";
     }
 }
