@@ -1,5 +1,3 @@
-
-
 # Çalışan Kaydetme Projesi
 
 ## Proje Tanımı
@@ -27,22 +25,22 @@ Bu proje, bir şirketin çalışanlarını departmanlara göre kaydetmek ve bu �
 ## Nasıl Kurulur?
 
 1. Bu projeyi yerel makinenize klonlayın:
-   ```
-   git clone https://github.com/kullanici-adi/proje-adi.git
-   ```
-2. Projeyi IDE'nizde açın ve `Main` sınıfını çalıştırın.
+   
+git clone https://github.com/kullanici-adi/proje-adi.git
+
+2. Projeyi IDE'nizde açın ve Main sınıfını çalıştırın.
 
 ## Örnek Kullanım
 
-```java
+java
 Calisan calisan1 = new Calisan("Ilker Kula", "Bilişim Teknolojileri Departmanı", 25000);
 System.out.println(calisan1);
 calisan1.zamYap();
 System.out.println(calisan1);
-```
+
 ## Collaborators
--  Abdulkerim Mutlu
--  Ummuhan Teke
--  Merve Kaya
--  Songül Çam
--  Sefa Kahraman
+-  **Abdulkerim Mutlu**
+-  **Ummuhan Teke**
+-  **Merve Kaya**
+-  **Songül Çam**
+-  **Sefa Kahraman**
