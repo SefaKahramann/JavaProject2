@@ -41,8 +41,8 @@ calisan1.zamYap();
 System.out.println(calisan1);
 ```
 ## Collaborators
-- ** Abdulkerim Mutlu(...)
-- ** Ummuhan Teke(...)
-- ** Merve Kaya(...)
-- ** Songül Çam(...)
-- ** Sefa Kahraman(...)
+-  Abdulkerim Mutlu(...)
+-  Ummuhan Teke(...)
+-  Merve Kaya(...)
+-  Songül Çam(...)
+-  Sefa Kahraman(...)
