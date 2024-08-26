@@ -1,6 +1,4 @@
-Tabii, projeyi açıklayan basit bir README dosyası hazırlayabilirim. İşte örnek bir README:
 
----
 
 # Çalışan Kaydetme Projesi
 
